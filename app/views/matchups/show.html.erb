@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Team1 name:</strong>
+  <%= @matchup.team1_name %>
+</p>
+
+<p>
+  <strong>Team2 name:</strong>
+  <%= @matchup.team2_name %>
+</p>
+
+<p>
+  <strong>Team1 spread:</strong>
+  <%= @matchup.team1_spread %>
+</p>
+
+<p>
+  <strong>Team2 spread:</strong>
+  <%= @matchup.team2_spread %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @matchup.start_time %>
+</p>
+
+<p>
+  <strong>Team1 score:</strong>
+  <%= @matchup.team1_score %>
+</p>
+
+<p>
+  <strong>Team2 score:</strong>
+  <%= @matchup.team2_score %>
+</p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @matchup.week %>
+</p>
+
+<%= link_to 'Edit', edit_matchup_path(@matchup) %> |
+<%= link_to 'Back', matchups_path %>

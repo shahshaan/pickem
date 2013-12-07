@@ -1,0 +1,49 @@
+<%= form_for(@matchup) do |f| %>
+  <% if @matchup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@matchup.errors.count, "error") %> prohibited this matchup from being saved:</h2>
+
+      <ul>
+      <% @matchup.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team1_name %><br>
+    <%= f.text_field :team1_name %>
+  </div>
+  <div class="field">
+    <%= f.label :team2_name %><br>
+    <%= f.text_field :team2_name %>
+  </div>
+  <div class="field">
+    <%= f.label :team1_spread %><br>
+    <%= f.text_field :team1_spread %>
+  </div>
+  <div class="field">
+    <%= f.label :team2_spread %><br>
+    <%= f.text_field :team2_spread %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :team1_score %><br>
+    <%= f.number_field :team1_score %>
+  </div>
+  <div class="field">
+    <%= f.label :team2_score %><br>
+    <%= f.number_field :team2_score %>
+  </div>
+  <div class="field">
+    <%= f.label :week %><br>
+    <%= f.datetime_select :week %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
