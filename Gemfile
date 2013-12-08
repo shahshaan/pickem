@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 gem 'hirb'
 
+gem 'therubyracer'
+
+gem 'less-rails'
+
 gem 'devise'
 
 gem "twitter-bootstrap-rails"
@@ -12,6 +16,7 @@ gem 'rails', '4.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'font-awesome-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
