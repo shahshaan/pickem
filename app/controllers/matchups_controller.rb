@@ -5,6 +5,7 @@ class MatchupsController < ApplicationController
   # GET /matchups.json
   def index
     @matchups = Matchup.all
+    @weeks = Week.all
   end
 
   # GET /matchups/1

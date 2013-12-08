@@ -11,30 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131207210444) do
+ActiveRecord::Schema.define(version: 20131208001305) do
 
   create_table "matchups", force: true do |t|
-    t.string   "team1_name"
-    t.string   "team2_name"
     t.float    "team1_spread"
     t.float    "team2_spread"
     t.datetime "start_time"
     t.integer  "team1_score"
     t.integer  "team2_score"
-    t.datetime "week"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "week_id"
+    t.integer  "team1_id"
+    t.integer  "team2_id"
   end
 
   create_table "picks", force: true do |t|
     t.integer  "user_id"
     t.integer  "matchup_id"
-    t.integer  "team"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "team_id"
   end
 
   add_index "picks", ["user_id"], name: "index_picks_on_user_id"
+
+  create_table "teams", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -55,5 +61,12 @@ ActiveRecord::Schema.define(version: 20131207210444) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "weeks", force: true do |t|
+    t.datetime "start_day"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+  end
 
 end
