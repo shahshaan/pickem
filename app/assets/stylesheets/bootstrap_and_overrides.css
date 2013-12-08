@@ -1,0 +1,50 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+
+a{
+ 	color: #A436CA;
+ }
+ body{
+ 	background-color: white;
+ 	color: #41413F;
+ }
+.MatchupsThisWeek{
+	margin: 1em auto 2em;
+	/*width: 10em;*/
+	font-size: 3em;
+}
+.team1{
+	font-size: 2em;
+	text-align: right;
+	font-weight: bold;
+}
+span{
+	font-weight: normal;
+	font-size: .7em;
+	margin: 0 0 3em 0;
+}
+.vs {
+  font-size: 4em;
+	color: red;
+	font-weight: bold;
+  text-align: right;
+}
+.team2{
+	font-size: 2em;
+	text-align: right;
+	font-weight: bold;
+}
+.teams-row{
+	margin: 3em 0 0 0;
+}
+.mrbutton{
+	font-size: 1em;
+	padding: .6em;
+}
+

@@ -1,3 +1,4 @@
+
 <h1>Listing matchups</h1>
 
 <% @weeks.each do |week| %>
@@ -21,42 +22,20 @@
 
 
 
-<table>
-  <thead>
-    <tr>
-      <th>Team1 name</th>
-      <th>Team2 name</th>
-      <th>Team1 spread</th>
-      <th>Team2 spread</th>
-      <th>Start time</th>
-      <th>Team1 score</th>
-      <th>Team2 score</th>
-      <th>Week</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @matchups.each do |matchup| %>
-      <tr>
-        <td><%#= matchup.team1_name %></td>
-        <td><%#= matchup.team2_name %></td>
-        <td><%#= matchup.team1_spread %></td>
-        <td><%#= matchup.team2_spread %></td>
-        <td><%#= matchup.start_time %></td>
-        <td><%#= matchup.team1_score %></td>
-        <td><%#= matchup.team2_score %></td>
-        <td><%#= matchup.week %></td>
-        <td><%#= link_to 'Show', matchup %></td>
-        <td><%#= link_to 'Edit', edit_matchup_path(matchup) %></td>
-        <td><%#= link_to 'Destroy', matchup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"><h1>This Week's Matchups</h1></div>
+  <div class="col-md-4"></div>
+ 
+</div>
 
-<br>
+<div class="row teams-row">
+   <div class="col-md-2"></div> 
+  <div class="col-md-4 team1"><button type="button" class="btn btn-info mrbutton">Miami Heat</button><span>(-5)</span></div>
+  <div class="col-md-1 vs"><h3>VS</h3></div>
+  <div class="col-md-4 team2"><button type="button" class="btn btn-info mrbutton">Minnesota TimberWolves</button> <span>(+5)</span></div>
+ <div class="col-md-2"></div> 
+</div>
 
-<%= link_to 'New Matchup', new_matchup_path %>
+
