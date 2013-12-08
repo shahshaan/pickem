@@ -1,41 +1,38 @@
 
-<h1>Listing matchups</h1>
-
-<% @weeks.each do |week| %>
-  <%= week.title %>
-    <% week.matchups.each do |matchup| %>
-      <p>
-        <% if matchup.game_over? %>
-          <%= matchup.result('winner').name %>
-          defeated
-          <%= matchup.result('loser').name %>
-        <% else %>
-          <%= link_to matchup.team(1).name, create_pick_path(matchup.id, matchup.team(1).id) %>
-          <%= matchup.team1_spread %>
-          vs.
-          <%= link_to matchup.team(2).name, create_pick_path(matchup.id, matchup.team(2).id) %>
-          <%= matchup.team2_spread %>
-        <% end -%>
-      </p>
-    <% end %>
-<% end %>
+<div class="row firstRow">
+  <div class="col-md-5"></div>
+  <div class="col-md-1 navlinks">Matchups</div>
+  <div class="col-md-2 navlinks">Leage Standings</div>
+  <div class="col-md-1 navlinks">Profile</div>
+  <div class="col-md-1 login">Login</div>
+  <div class="col-md-2"></div>
+</div>
 
 
 
-
-<div class="row">
-  <div class="col-md-4"></div>
-  <div class="col-md-4"><h1>This Week's Matchups</h1></div>
-  <div class="col-md-4"></div>
+<div class="row firstRow">
+  <div class="col-md-3"></div>
+  <div class="col-md-6"><h1>This Week's Matchups<h1></div>
+  <div class="col-md-3"></div>
  
 </div>
 
 <div class="row teams-row">
-   <div class="col-md-2"></div> 
-  <div class="col-md-4 team1"><button type="button" class="btn btn-info mrbutton">Miami Heat</button><span>(-5)</span></div>
-  <div class="col-md-1 vs"><h3>VS</h3></div>
-  <div class="col-md-4 team2"><button type="button" class="btn btn-info mrbutton">Minnesota TimberWolves</button> <span>(+5)</span></div>
- <div class="col-md-2"></div> 
+   <div class="col-md-1"></div> 
+  <div class="col-md-4 team1"><button type="button" class="btn btn-info mrbutton undecided">Miami Heat <span>(-5)</span></button></div>
+  <div class="col-md-1"><h3 class="vs">VS</h3></div>
+  <div class="col-md-4 team2"><button type="button" class="btn btn-info mrbutton">Minnesota TimberWolves <span>(+5)</span> </button> </div>
+ <div class="col-md-1"></div> 
 </div>
+
+<div class="row teams-row">
+   <div class="col-md-1"></div> 
+  <div class="col-md-4 team1"><button type="button" class="btn btn-info mrbutton won">Oklahoma City Thunder <span>(-4)</span></button></div>
+  <div class="col-md-1"><h3 class="vs">VS</h3></div>
+  <div class="col-md-4 team2"><button type="button" class="btn btn-info mrbutton loss">Indiana Pacers <span>(+4)</span></button> </div>
+ <div class="col-md-1"></div> 
+</div>
+
+
 
 
