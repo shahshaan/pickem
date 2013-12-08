@@ -80,9 +80,9 @@ matchup.save
 
 matchup = Matchup.new
 matchup.team1_id = Team.first.id + 5
-matchup.team1_spread = -3.5
+matchup.team1_spread = -10
 matchup.team2_id = Team.first.id
-matchup.team2_spread = 3.5
+matchup.team2_spread = 10
 matchup.week_id = Week.first.id + 1
 matchup.start_time = DateTime.new(2013,12,7,19,30,0)
 matchup.save
@@ -91,9 +91,9 @@ puts "Creating Week 3 Games"
 
 matchup = Matchup.new
 matchup.team1_id = Team.first.id + 6
-matchup.team1_spread = -3.5
+matchup.team1_spread = -5
 matchup.team2_id = Team.first.id + 2
-matchup.team2_spread = 3.5
+matchup.team2_spread = 5
 matchup.week_id = Week.first.id + 2
 matchup.start_time = DateTime.new(2013,12,13,19,30,0)
 matchup.save

@@ -1,2 +1,16 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1 class="pagination-centered"><%= @user.full_name %></h1>
+<h3 class="pagination-centered"><%= @user.score %> <%= if @user.score != 1 then "points" else "point" end %></h3>
+<h3 class="pagination-centered"><%= (@user.pick_percentage * 100).to_i %>%</h3>
+
+
+
+
+
+
+<% Matchup.all_finished.each do |matchup| %>
+  <%= matchup.display %>
+  <%= matchup.winner.name %>
+  <% @user.picks.where(matchup_id: matchup.id).each do |pick| %>
+    <p><%= pick.team.name %></p>
+  <% end %>
+<% end %>

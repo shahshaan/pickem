@@ -2,7 +2,21 @@ class Matchup < ActiveRecord::Base
   belongs_to :week
   has_many :users, through: :picks
 
-  def result(choice)
+  def self.all_finished
+    finished_matchups = []
+    self.all.each do |matchup|
+      if matchup.game_over?
+        finished_matchups << matchup
+      end
+    end
+    finished_matchups
+  end
+
+  def self.amount_finished
+    self.all_finished.count
+  end
+
+  def result
     if self.game_over?
       if self.team1_score + self.team1_spread > self.team2_score
         result = {
@@ -18,7 +32,15 @@ class Matchup < ActiveRecord::Base
     else
       false
     end
-    result[choice]
+    result
+  end
+
+  def winner
+    self.result['winner']
+  end
+
+  def loser
+    self.result['loser']    
   end
 
   def game_over?
@@ -39,6 +61,10 @@ class Matchup < ActiveRecord::Base
 
   def teams
     [Team.find(self.team1_id), Team.find(self.team2_id)]
+  end
+
+  def display
+    self.teams[0].name + " vs. " + self.teams[1].name
   end
 
 end
