@@ -67,4 +67,13 @@ class Matchup < ActiveRecord::Base
     self.teams[0].name + " vs. " + self.teams[1].name
   end
 
+  def user_status(user_id, team_id)
+    pick = Pick.where(matchup_id: self.id, user_id: user_id).first
+    if pick
+      if pick.team_id == team_id then "win" else "lose" end
+    else
+      "undecided"
+    end
+  end
+
 end

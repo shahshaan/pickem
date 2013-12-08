@@ -10,19 +10,46 @@
 a{
  	color: #A436CA;
  }
- body{
- 	background-color: white;
+/* body{
+ 	background-image: url('background.002.png');
  	color: #41413F;
+ 	background-repeat:no-repeat;
+ 	background-size:100% 100%;
+ }*/
+ body{
+ 	background: url('background.002.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+ h1{
+ 	font-size: 4em;
  }
-.MatchupsThisWeek{
-	margin: 1em auto 2em;
+ .navlinks{
+	text-align: right;
+	font-size: 1.15em;
+	color: white;
+}
+ .login{
+ 	border-left: solid 1px white;
+ 	font-size: 1.15em;
+ 	color: white;
+ }
+.matchupsThisWeek{
+	/*margin: 1em auto 4em;*/
 	/*width: 10em;*/
 	font-size: 3em;
+}
+.firstRow{
+	margin:2em 0 7em 0;
 }
 .team1{
 	font-size: 2em;
 	text-align: right;
 	font-weight: bold;
+  
 }
 span{
 	font-weight: normal;
@@ -30,21 +57,47 @@ span{
 	margin: 0 0 3em 0;
 }
 .vs {
-  font-size: 4em;
-	color: red;
+  font-size: 2.5em;
+	color: white;
 	font-weight: bold;
   text-align: right;
+  margin-right: .5em;
+
 }
 .team2{
 	font-size: 2em;
-	text-align: right;
+	text-align: left;
 	font-weight: bold;
+	margin-left: 1em;
 }
 .teams-row{
-	margin: 3em 0 0 0;
+	margin: 3em 0 2em 0;
 }
 .mrbutton{
 	font-size: 1em;
 	padding: .6em;
+	margin-right: .25em;
+	background: none;
+	border: solid 1px white;
 }
+.mrbutton:hover{
+  font-size: 1em;
+  padding: .6em;
+  margin-right: .25em;
+  background: none;
+  border: solid 1px white;
+  border-bottom: solid 7px green;
+}
+.undecided{
+  border-bottom: solid 7px gray;
+}
+.win{
+	border-bottom: solid 7px green;
+}
+
+.lose{
+	border-bottom: solid 7px red;
+}
+
+
 
