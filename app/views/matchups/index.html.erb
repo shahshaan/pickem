@@ -1,16 +1,28 @@
-<div class="row firstRow">
+<nav class="navbar navbar-default" role="navigation">
+  <p class="navbar-text navbar-right">
+    <a href="#" class="navbar-link">Matchups</a>
+    <a href="#" class="navbar-link">League Standings</a>
+    <a href="#" class="navbar-link">Profile</a>
+    <a href="#" class="navbar-link login">Login</a>
+  </p>
+</nav>
+
+<!-- <div class="row firstRow">
+>>>>>>> front-end
   <div class="col-md-5"></div>
   <div class="col-md-1 navlinks">Matchups</div>
   <div class="col-md-2 navlinks">Leage Standings</div>
   <div class="col-md-1 navlinks">Profile</div>
   <div class="col-md-1 login">Login</div>
   <div class="col-md-2"></div>
-</div>
+</div> -->
 
 <div class="row firstRow">
   <div class="col-md-12"><h1 class="pagination-centered">This Week's Matchups<h1></div>
-  <div class="col-md-12"><h4 class="pagination-centered"><%= @week.title %><h1></div>
+  <div class="col-md-12"><h4 class="pagination-centered"><%= @week.title %><h1></div> 
 </div>
+
+
 
 <% @week.matchups.each do |matchup| %>
     <div class="row teams-row">

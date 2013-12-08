@@ -110,14 +110,14 @@ matchup.save
 puts "Creating users"
 User.destroy_all
 users = [
-  {first_name: "Shaan", last_name: "Shah"},
-  {first_name: "Kulwant", last_name: "Saluja"},
-  {first_name: "Matt", last_name: "Larsh"},
-  {first_name: "Elaine", last_name: "Looney"},
-  {first_name: "John", last_name: "Kim"},
-  {first_name: "Tyler", last_name: "Wasden"},
-  {first_name: "Jessica", last_name: "Chavez"},
-  {first_name: "Alex", last_name: "Levine"}
+  {first_name: "Shaan", last_name: "Shah", profile_pic: "http://www.themakersquare.com/images/team/shaan-2cfdad52.jpg" },
+  {first_name: "Kulwant", last_name: "Saluja", profile_pic: "https://0.gravatar.com/avatar/552889e3ff579575424f280c57cdc747?d=https%3A%2F%2Fidenticons.github.com%2Fd5e859976070fa1e41f25d7ca6cfcdce.png&r=x&s=440"},
+  {first_name: "Matt", last_name: "Larsh", profile_pic: "https://1.gravatar.com/avatar/7f1bb5d9c3213e958aad329b80b57356?d=https%3A%2F%2Fidenticons.github.com%2Fe547bca166b15e6a5d3258cd34d5b38d.png&r=x&s=440"},
+  {first_name: "Elaine", last_name: "Looney", profile_pic: "https://2.gravatar.com/avatar/3a30b94a2cbc7b18083ba24dcbba53c3?d=https%3A%2F%2Fidenticons.github.com%2F77fcf81a7996fa9666a143b9b31c7037.png&r=x&s=440"},
+  {first_name: "John", last_name: "Kim", profile_pic: "https://1.gravatar.com/avatar/4e3c4b37a379073edbf8f5e57d9d88af?d=https%3A%2F%2Fidenticons.github.com%2Fc9749e66b61457ceb4c1c17cb5c88a30.png&r=x&s=440"},
+  {first_name: "Tyler", last_name: "Wasden", profile_pic: "https://1.gravatar.com/avatar/6bfbac89d385c47eec102e215f0fb2d4?d=https%3A%2F%2Fidenticons.github.com%2F8ba89d9a1377d371a87d985fdf3aab24.png&r=x&s=440"},
+  {first_name: "Jessica", last_name: "Chavez", profile_pic: "http://m.c.lnkd.licdn.com/mpr/pub/image-4fabukm7F22P9oSCrP3AMrdnA_vyMIcd_tAlKk0wAORHJAnh4fal9ZK7APQ0H6c_0yCN/jessica-chavez.jpg"},
+  {first_name: "Alex", last_name: "Levine", profile_pic: "https://2.gravatar.com/avatar/64bab54cb414e501d2c4cc4b83b1c96d?d=https%3A%2F%2Fidenticons.github.com%2Fcef47cd6a06368c9ac6d4ffc7df22429.png&r=x&s=440"}
 ]
 
 users.each do |user|
@@ -125,7 +125,8 @@ users.each do |user|
     :first_name => user[:first_name],
     :last_name => user[:last_name],
     :password => "makersquare", 
-    :password_confirmation => "makersquare"
+    :password_confirmation => "makersquare",
+    :profile_pic => user[:profile_pic]
   })
   user.email = "#{user.first_name.downcase}.#{user.last_name.downcase}@gmail.com"
   user.save

@@ -1,10 +1,18 @@
-<ul>
-  <% @users.each do |user| %>
-    <li>
-      (<%= user.id %>) <%= link_to user.full_name, user_path(user.id) %>
-    </li>
-  <% end -%>
-</ul>
+<nav class="navbar navbar-default" role="navigation">
+  <p class="navbar-text navbar-right">
+    <a href="#" class="navbar-link">Matchups</a>
+    <a href="#" class="navbar-link">League Standings</a>
+    <a href="#" class="navbar-link">Profile</a>
+    <a href="#" class="navbar-link login">Login</a>
+  </p>
+</nav>
+
+<div class="row profile-name-page-row">
+  <div class="col-md-4"></div>
+  <div class="col-md-3"><h1 class="league-standings">League Standings<h1></div>
+  <div class="col-md-5"></div>
+</div>
+
 
 
 <% Matchup.all_finished.each do |matchup| %>
@@ -20,25 +28,43 @@
   <div class="col-md-2"></div>
   <div class="col-md-8">
     <table class="table">
-      <thead>
+
         <tr>
+      <thead>
+
           <th>Rank</th>
           <th>Name</th>
           <th>Points</th>
           <th>Percentage</th>
         </tr>
       </thead>
+
       <tbody>
         <% @users.each do |user| %>
           <tr>
             <td>#</td>
+            <td><%= image_tag user.profile_pic, class: "pic" %></td>
             <td><%= user.full_name %></td>
             <td><%= user.score %></td>
             <td><%= user.pick_percentage %></td>
           </tr>
         <% end %>
+			<<!-- img class="pic" src="http://www.themakersquare.com/images/team/shaan-2cfdad52.jpg" alt="">
+			<img class="pic2" src="https://0.gravatar.com/avatar/552889e3ff579575424f280c57cdc747?d=https%3A%2F%2Fidenticons.github.com%2Fd5e859976070fa1e41f25d7ca6cfcdce.png&r=x&s=440" alt="">
+			<img class="pic3" src="https://1.gravatar.com/avatar/7f1bb5d9c3213e958aad329b80b57356?d=https%3A%2F%2Fidenticons.github.com%2Fe547bca166b15e6a5d3258cd34d5b38d.png&r=x&s=440" alt="">
+			<img class="pic4" src="https://2.gravatar.com/avatar/3a30b94a2cbc7b18083ba24dcbba53c3?d=https%3A%2F%2Fidenticons.github.com%2F77fcf81a7996fa9666a143b9b31c7037.png&r=x&s=440" alt="">
+			<img class="pic5" src="https://1.gravatar.com/avatar/4e3c4b37a379073edbf8f5e57d9d88af?d=https%3A%2F%2Fidenticons.github.com%2Fc9749e66b61457ceb4c1c17cb5c88a30.png&r=x&s=440" alt="">
+			<img class="pic6" src="https://1.gravatar.com/avatar/6bfbac89d385c47eec102e215f0fb2d4?d=https%3A%2F%2Fidenticons.github.com%2F8ba89d9a1377d371a87d985fdf3aab24.png&r=x&s=440" alt=""> -->
       </tbody>
     </table>
   </div>
   <div class="col-md-2"></div> 
 </div>
+
+<ul>
+  <% @users.each do |user| %>
+    <li class="users">
+      (<%= user.id %>) <%= link_to user.full_name, user_path(user.id) %>
+    </li>
+  <% end -%>
+</ul>

@@ -1,6 +1,82 @@
+<nav class="navbar navbar-default" role="navigation">
+  <p class="navbar-text navbar-right">
+    <a href="#" class="navbar-link">Matchups</a>
+    <a href="#" class="navbar-link">League Standings</a>
+    <a href="#" class="navbar-link">Profile</a>
+    <a href="#" class="navbar-link login">Login</a>
+  </p>
+</nav>
+
+<div class="row profile-name-page-row">
+  <div class="col-md-4"></div>
+  <div class="col-md-3"><h1 class="profile-page-name">Shaan Shah<h1></div>
+  <div class="col-md-5"></div>
+</div>
+
+<div class="row record-row">
+  <div class="col-md-5"></div>
+  <div class="col-md-3"><h2 class="record">Record: 12-2<h2></div>
+  <div class="col-md-4"></div>
+</div>
+
+<div class="row record-row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"><h2 class="standings">Standings: 1st (1/10)<h2></div>
+  <div class="col-md-4"></div>
+</div>
+
+<div class="row record-row">
+  <div class="col-md-5"></div>
+  <div class="col-md-2"><h2 class="week-history">Week 3<h2></div>
+  <div class="col-md-5"></div>
+</div>
+
+<div class="row teams-row">
+   <div class="col-md-1"></div> 
+  <div class="col-md-4 team1"><button type="button" class="btn btn-info mrbutton win">Oklahoma City Thunder <span>(-4)</span></button></div>
+  <div class="col-md-1"><h3 class="vs">VS</h3></div>
+  <div class="col-md-4 team2"><button type="button" class="btn btn-info mrbutton lose	">Indiana Pacers <span>(+4)</span></button> </div>
+ <div class="col-md-1"><i class="fa fa-thumbs-o-up mr-thumb"></i><div class="pick">GOOD PICK!</div></div> 
+</div>
+
+<div class="row record-row">
+  <div class="col-md-5"></div>
+  <div class="col-md-2"><h2 class="week-history">Week 2<h2></div>
+  <div class="col-md-5"></div>
+</div>
+
+<div class="row teams-row">
+   <div class="col-md-1"></div> 
+  <div class="col-md-4 team1"><button type="button" class="btn btn-info mrbutton win">Los Angeles Lakers <span>(+9)</span></button></div>
+  <div class="col-md-1"><h3 class="vs">VS</h3></div>
+  <div class="col-md-4 team2"><button type="button" class="btn btn-info mrbutton lose">Boston Celtics <span>(-9)</span></button> </div>
+ <div class="col-md-1"><i class="fa fa-thumbs-o-down mr-thumb-down"></i></div> 
+</div>
+
+
+<div class="row record-row">
+  <div class="col-md-5"></div>
+  <div class="col-md-2"><h2 class="week-history">Week 1<h2></div>
+  <div class="col-md-5"></div>
+</div>
+<div class="row teams-row">
+   <div class="col-md-1"></div> 
+  <div class="col-md-4 team1"><button type="button" class="btn btn-info mrbutton win">Houston Rockets <span>(-7)</span></button></div>
+  <div class="col-md-1"><h3 class="vs">VS</h3></div>
+  <div class="col-md-4 team2"><button type="button" class="btn btn-info mrbutton lose">Orlando Magic <span>(+7)</span></button> </div>
+ <div class="col-md-1"><i class="fa fa-thumbs-o-up mr-thumb"></i><div class="pick">GOOD PICK!</div></div> 
+</div></div> 
+</div>
+
+
+
+
+
+
+
 <h1 class="pagination-centered"><%= @user.full_name %></h1>
 <h3 class="pagination-centered"><%= @user.score %> <%= if @user.score != 1 then "points" else "point" end %></h3>
-<h3 class="pagination-centered"><%= (@user.pick_percentage * 100).to_i %>%</h3>
+<h3 class="pagination-centered"><%#= (@user.pick_percentage * 100).to_i %>%</h3>
 
 
 

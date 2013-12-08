@@ -5,7 +5,7 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
-
+ /*= require font-awesome
 
 a{
  	color: #A436CA;
@@ -23,6 +23,7 @@ a{
   -o-background-size: cover;
   background-size: cover;
   color: white;
+  font-family: 'Open Sans', sans-serif;
 }
  h1{
  	font-size: 4em;
@@ -36,11 +37,12 @@ a{
  	border-left: solid 1px white;
  	font-size: 1.15em;
  	color: white;
+ 	padding-left: 2em;
  }
 .matchupsThisWeek{
 	/*margin: 1em auto 4em;*/
 	/*width: 10em;*/
-	font-size: 3em;
+	margin: 2em auto 3em auto;
 }
 .firstRow{
 	margin:2em 0 7em 0;
@@ -80,13 +82,19 @@ span{
 	background: none;
 	border: solid 1px white;
 }
-.mrbutton:hover{
-  font-size: 1em;
-  padding: .6em;
-  margin-right: .25em;
-  background: none;
+.team2 .mrbutton:hover{
+  /*background: rgb(0, 0, 0);*/
+  background: rgba(255, 255, 255, 0.2);
   border: solid 1px white;
-  border-bottom: solid 7px green;
+	/*background-color: white;*/
+	/*opacity: .1;*/
+}
+.team1 .mrbutton:hover{
+  /*background: rgb(0, 0, 0);*/
+  background: rgba(255, 255, 255, 0.2);
+  border: solid 1px white;
+	/*background-color: white;*/
+	/*opacity: .1;*/
 }
 .undecided{
   border-bottom: solid 7px gray;
@@ -98,6 +106,166 @@ span{
 .lose{
 	border-bottom: solid 7px red;
 }
+
+.navbar-link{
+	margin: .5em 2.75em 1em 1em;
+	color: white;
+}
+.navbar{
+	background: none;
+	border: none;
+}
+
+.navbar .navbar-text .navbar-link{
+	color: white;
+	font-size: 1.3em;
+}
+
+
+
+/********************Profile Page CSS****************/
+
+
+.profile-page-name{
+	margin: 0 auto;
+	width: 20em;
+	/*text-align: right;*/
+}
+
+.profile-name-page-row{
+	margin:6em 0 4em 0;
+	position:relative;
+	left: 3.5em;
+}
+.record{
+	text-align: left;
+	font-size: 2.5em;
+	position: relative;
+	right: .2em;
+	font-weight: 400;
+}
+.standings{
+	position: relative;
+	left: 2.05em;
+	margin: 1em 0 1em 0;
+	font-weight: 400;
+}
+.week-history{
+	border-bottom: 1px solid white;
+	width: 4em;
+	margin: 3em 0 0 0;
+}
+.mr-thumb{
+	font-size: 3em;
+	text-align: left;
+	position: relative;
+	top: .2em;
+	right: 4em;
+	color: #04F72C;
+}
+.mr-thumb-down{
+	font-size: 3em;
+	text-align: left;
+	position: relative;
+	top: .2em;
+	right: 4em;
+	color: #FF0000;
+}
+.pick{
+	font-size: 1em;
+	position: relative;
+	top: .7em;
+	right: 13.45em;
+
+}
+
+
+
+/********************League Standings****************/
+
+.league-standings{
+	margin: 0 auto 1em auto;
+	width: 20em;
+	position: relative;
+	right: 1em;
+	/*text-align: right;*/
+}
+.table {
+	font-size: 1.5em;
+}
+.table tbody tr td{
+	padding: .4em;
+}
+
+.users{
+	/*float: left;*/
+}
+
+.pic {
+	background-repeat: no-repeat;
+	height: 85px;
+	width: 85px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 1.5px white, 0 1px 20px #333333;
+/*	position: relative;
+	top: 8em;
+	left: 6em;*/
+
+}
+.pic2{
+		background-repeat: no-repeat;
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 1.5px white, 0 1px 20px #333333;
+	position: relative;
+	top: 13.25em;
+	left: 2em;
+}
+.pic3{
+		background-repeat: no-repeat;
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 1.5px white, 0 1px 20px #333333;
+	position: relative;
+	top: 18.4em;
+	right: 1.9em;
+}
+.pic4{
+	background-repeat: no-repeat;
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 1.5px white, 0 1px 20px #333333;
+	position: relative;
+	top: 23.5em;
+	right: 6em;
+}
+.pic5{
+	background-repeat: no-repeat;
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 1.5px white, 0 1px 20px #333333;
+	position: relative;
+	top: 29em;
+	right: 9.68em;
+}
+.pic6{
+	background-repeat: no-repeat;
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 1.5px white, 0 1px 20px #333333;
+	position: relative;
+	top: 34.12em;
+	right: 13.7em;
+}
+
+
+
+
 
 
 
