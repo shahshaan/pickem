@@ -2,6 +2,12 @@ class Matchup < ActiveRecord::Base
   belongs_to :week
   has_many :users, through: :picks
 
+  validates :team1_id, presence: true
+  validates :team2_id, presence: true
+  validates :team1_spread, presence: true
+  validates :start_time, presence: true
+  validates :week_id, presence: true
+
   def self.all_finished
     finished_matchups = []
     self.all.each do |matchup|

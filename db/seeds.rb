@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Team.destroy_all
+
 puts "Creating teams"
 
 teams = [
@@ -32,11 +34,9 @@ week_start_days = [
   DateTime.new(2013,12,15)
 ]
 
-week_number = 0
 week_start_days.each do |week_start_day|
-  week_number += 1
   week = Week.new
-  week.title = "Week " + week_number.to_s
+  week.title = "Week of " + week_start_day.strftime("%A, %b %d, %Y")
   week.start_day = week_start_day
   week.save
 end
@@ -110,19 +110,25 @@ matchup.save
 puts "Creating users"
 User.destroy_all
 users = [
-  {email: "shahshaan@gmail.com", first_name: "Shaan", last_name: "Shah"},
-  {email: "kssaluja@yahoo.com", first_name: "Kulwant", last_name: "Saluja"},
-  {email: "larshmatt@yahoo.com", first_name: "Matt", last_name: "Larsh"}
+  {first_name: "Shaan", last_name: "Shah"},
+  {first_name: "Kulwant", last_name: "Saluja"},
+  {first_name: "Matt", last_name: "Larsh"},
+  {first_name: "Elaine", last_name: "Looney"},
+  {first_name: "John", last_name: "Kim"},
+  {first_name: "Tyler", last_name: "Wasden"},
+  {first_name: "Jessica", last_name: "Chavez"},
+  {first_name: "Alex", last_name: "Levine"}
 ]
 
 users.each do |user|
-  User.create!({
-    :email => user[:email],
+  user = User.new({
     :first_name => user[:first_name],
     :last_name => user[:last_name],
-    :password => "mkspickem", 
-    :password_confirmation => "mkspickem"
+    :password => "makersquare", 
+    :password_confirmation => "makersquare"
   })
+  user.email = "#{user.first_name.downcase}.#{user.last_name.downcase}@gmail.com"
+  user.save
 end
 
 puts "Creating picks"

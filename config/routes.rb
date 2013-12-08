@@ -1,6 +1,7 @@
 Pickem::Application.routes.draw do
 
   get "/picks/:matchup_id/:team_id" => 'picks#create', as: 'create_pick'
+  get 'matchups/admin' => 'matchups#admin'
 
   resources :matchups
   

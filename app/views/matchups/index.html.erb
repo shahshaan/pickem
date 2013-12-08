@@ -9,9 +9,10 @@
 
 <div class="row firstRow">
   <div class="col-md-12"><h1 class="pagination-centered">This Week's Matchups<h1></div>
+  <div class="col-md-12"><h4 class="pagination-centered"><%= @week.title %><h1></div>
 </div>
 
-<% @weeks.find_by_title("Week 2").matchups.each do |matchup| %>
+<% @week.matchups.each do |matchup| %>
     <div class="row teams-row">
        <div class="col-md-1"></div> 
       <div class="col-md-4 team1"><a href="<%= create_pick_path(matchup.id, matchup.team(1).id) %>"><button type="button" class="btn btn-info mrbutton <%= matchup.user_status(current_user.id, matchup.team(1).id) %>"><%= matchup.team(1).name %> <span>(<%= matchup.team1_spread %>)</span></button></a></div>
